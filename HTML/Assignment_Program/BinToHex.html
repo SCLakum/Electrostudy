@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Electro Study</title>
+  <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/code_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <Script>
+    $(function () {
+      $('#header').load('/header.html')
+    })
+  </Script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="header"></div>
+  <h1 class="Page_Head">Binary number To Hex Converter</h1>
+  <p1 class="program_discription"> Here User Input Is Binary Number As a String And The Output Of Program Is
+    hex Number.</p1>
+  <div class="Jav_Code">
+    <div class="container_code">
+      <div class="code-wrape">
+        <pre><div>Java Code <button id="copy-button">Copy Code</button> <button id="copy-button">Open Play Ground</button> <button id="copy-button" onclick="window.location.href='#Full_program_discription';" >Code Explanation</button></div> <code id="code" class="language-java">
+  import java.util.Scanner;
+  public class Main {
+    public static String BinToHex(String binary) {
+      int Len1 = binary.length();
+      String New_Bin = "";
+      if (Len1 % 4 != 0) {
+        if (Len1 % 4 == 1) {
+          New_Bin = "000" + binary;
+        }
+        if (Len1 % 4 == 2) {
+          New_Bin = "00" + binary;
+        }
+        if (Len1 % 4 == 3) {
+          New_Bin = "0" + binary;
+        }
+      }
+      else {
+        New_Bin = binary;
+      }
+      int Len = New_Bin.length();
+      String NewString = "";
+      int i = 4;
+      while (i <= Len) {
+        String TempNum = New_Bin.substring(Len - i, Len - i + 4);
+        int number = Integer.parseInt(TempNum, 2);
+        String hexa = Integer.toHexString(number);
+        NewString = hexa + NewString;
+        i = i + 4;
+      }
+      System.out.println("Binary Number " + binary + " = " + NewString + " Hex");
+      return NewString;
+    }
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      String binary = sc.nextLine();
+      BinToHex(binary);
+  }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="blank_Div">
+
+  </div>
+  <p id="Full_program_discription"> This code is a Java program that converts a binary number to its hexadecimal
+    equivalent.
+  </p>
+  <p id="Full_program_discription"> The program defines a public class called Main. Within this class, there are two
+    methods: BinToHex main.
+  </p>
+  <P id="Full_program_discription">
+    The BinToHex method takes a String parameter called binary, which represents the binary number to be converted to
+    hexadecimal. The method starts by calculating the length of the binary string using the length() method of the
+    String class.
+  </P>
+  <P id="Full_program_discription"> If the length of the binary string is not divisible by 4, the method adds leading
+    zeros to make it divisible by 4.
+    It does this by checking the remainder when the length is divided by 4, and then adding the appropriate number of
+    leading zeros.
+  </P>
+  <P id="Full_program_discription">
+    Next, the method initializes a String variable called NewString, which will store the hexadecimal equivalent of the
+    binary number. It then sets an integer variable called i to 4 and enters a while loop.
+    Within the while loop, the method extracts a substring of four characters from the end of the binary string using
+    the substring() method of the String class. This substring is converted to an integer using the parseInt() method of
+    the Integer class with a radix of 2 (binary). The resulting integer is then converted to its hexadecimal equivalent
+    using the toHexString() method of the Integer class.
+  </P>
+  <P id="Full_program_discription">
+    The hexadecimal string is then added to the beginning of the NewString using the + operator. The loop counter i is
+    incremented by 4, and the loop continues until the entire binary string has been processed.
+  </P>
+  <P id="Full_program_discription">
+    Finally, the method prints out the original binary number and its hexadecimal equivalent.
+  </P>
+  <P id="Full_program_discription">
+    The main method is the entry point of the program. It creates a Scanner object sc that reads input from the standard
+    input stream. It then reads a line of input from the user and passes it to the BinToHex method. The program ends
+    after the BinToHex method is executed.
+  </p>
+  <!--
+  <a href="#Full_program_discription"></a>
+  <div id="google"></div>
+ -->
+
+</body>
+<script src="/JS/code_script.js"></script>
+<script src="/JS/script.js"></script>
+
+</html>
