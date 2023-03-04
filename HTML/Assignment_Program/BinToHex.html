@@ -65,50 +65,18 @@
       </div>
     </div>
   </div>
-  <div class="blank_Div">
-
-  </div>
-  <p id="Full_program_discription"> This code is a Java program that converts a binary number to its hexadecimal
-    equivalent.
-  </p>
-  <p id="Full_program_discription"> The program defines a public class called Main. Within this class, there are two
-    methods: BinToHex main.
-  </p>
-  <P id="Full_program_discription">
-    The BinToHex method takes a String parameter called binary, which represents the binary number to be converted to
-    hexadecimal. The method starts by calculating the length of the binary string using the length() method of the
-    String class.
-  </P>
-  <P id="Full_program_discription"> If the length of the binary string is not divisible by 4, the method adds leading
-    zeros to make it divisible by 4.
-    It does this by checking the remainder when the length is divided by 4, and then adding the appropriate number of
-    leading zeros.
-  </P>
-  <P id="Full_program_discription">
-    Next, the method initializes a String variable called NewString, which will store the hexadecimal equivalent of the
-    binary number. It then sets an integer variable called i to 4 and enters a while loop.
-    Within the while loop, the method extracts a substring of four characters from the end of the binary string using
-    the substring() method of the String class. This substring is converted to an integer using the parseInt() method of
-    the Integer class with a radix of 2 (binary). The resulting integer is then converted to its hexadecimal equivalent
-    using the toHexString() method of the Integer class.
-  </P>
-  <P id="Full_program_discription">
-    The hexadecimal string is then added to the beginning of the NewString using the + operator. The loop counter i is
-    incremented by 4, and the loop continues until the entire binary string has been processed.
-  </P>
-  <P id="Full_program_discription">
-    Finally, the method prints out the original binary number and its hexadecimal equivalent.
-  </P>
-  <P id="Full_program_discription">
-    The main method is the entry point of the program. It creates a Scanner object sc that reads input from the standard
-    input stream. It then reads a line of input from the user and passes it to the BinToHex method. The program ends
-    after the BinToHex method is executed.
-  </p>
-  <!--
-  <a href="#Full_program_discription"></a>
-  <div id="google"></div>
- -->
-
+  <div class="blank_Div"></div>
+<div id="Full_program_discription">
+  <ol>
+    <Li>The BinToHex function takes a binary number as a string input and returns its hexadecimal equivalent as a string.</Li>
+    <Li>The first thing the function does is to check the length of the binary number. If it is not a multiple of 4, then it adds extra zeros to the left of the binary number to make its length a multiple of 4. This is because each hexadecimal digit represents 4 bits, so the binary number needs to be divided into groups of 4 bits to convert it into hexadecimal form.</Li>
+    <Li>Next, the function initializes a new string called NewString and sets its value to an empty string. It also initializes a variable i to 4, which will be used to extract 4 bits at a time from the binary number.</Li>
+    <Li>The function then enters a while loop that will continue until i is greater than or equal to the length of the binary number. Inside the loop, it extracts 4 bits from the binary number starting from the right end of the string. It does this using the substring function and stores the extracted bits in a temporary string variable called TempNum.</Li>
+    <Li>Next, the function converts TempNum from binary to decimal using the parseInt function and then converts the decimal number to its hexadecimal equivalent using the toHexString function. The resulting hexadecimal digit is then concatenated to the left of NewString.</Li>
+    <Li>After the loop completes, the function prints the original binary number and its hexadecimal equivalent to the console and returns the hexadecimal equivalent string.</Li>
+    <Li>Finally, in the main function, the code takes a binary number as input from the user using the Scanner class and passes it to the BinToHex function. The function then returns the hexadecimal equivalent of the binary number, which is printed to the console.</Li>
+  </ol>
+</div>
 </body>
 <script src="/JS/code_script.js"></script>
 <script src="/JS/script.js"></script>

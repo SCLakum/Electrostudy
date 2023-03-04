@@ -43,7 +43,6 @@ body {
 }
 
 .Nab_bar_List {
-
   list-style-type: none;
   text-align: center;
 }
@@ -58,10 +57,11 @@ body {
   display: block;
   color: white;
   text-align: left;
-  margin: 0px 30px 0px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 1em ;
   text-decoration: none;
 }
+
 .Sub_Bar_Link{
   margin: 0px;
 
@@ -74,6 +74,7 @@ body {
 .Sub_Nab_bar_List{
   position: absolute;
   left: 0;
+  padding: 0;
   width: 200px;
   background-color:#3F51B5;
   display: none;
@@ -124,9 +125,12 @@ body {
 
   .Sub_Nab_bar_List{
       position: relative;
-      width: 100%;
+      width: 90%;
   }
 
+  .Bar_Link{
+    text-align: left;
+  }
   .Sub_Bar_name{
       background: #242d64;
       
@@ -409,7 +413,7 @@ menuitem>menu>menuitem.hover>menu>menuitem {
 /* ------------------------------- Copy Code button where java code display -----------------------------*/
 
 #copy-button {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 10px;
   cursor: pointer;
   outline: 0;
   float: right;
@@ -434,7 +438,7 @@ menuitem>menu>menuitem.hover>menu>menuitem {
 
 /* -------------------------------------------Class Note Card Display------------------------------------- */
 
-body>.Class_Note {
+body >.Class_Note {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -557,5 +561,13 @@ body>.Class_Note {
 }
 
 #Full_program_discription{
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  padding: 5px 30px 10px 0px ;
+  border: 2px solid black;
+  text-align: justify;
+}
+#Full_program_discription > ol > li{
+  padding: 5px 30px 10px 0px ;
+  
 }
